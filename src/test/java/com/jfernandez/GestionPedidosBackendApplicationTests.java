@@ -1,4 +1,4 @@
-package com.jfernandez.gestion.pedidos;
+package com.jfernandez;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
