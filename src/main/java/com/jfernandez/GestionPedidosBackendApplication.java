@@ -1,4 +1,4 @@
-package com.jfernandez.gestion.pedidos;
+package com.jfernandez;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
