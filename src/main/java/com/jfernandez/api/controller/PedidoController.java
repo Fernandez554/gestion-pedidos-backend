@@ -2,6 +2,7 @@ package com.jfernandez.api.controller;
 
 import com.jfernandez.domain.entities.documents.Pedido;
 import com.jfernandez.infraestructure.service.IPedidoService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -37,7 +38,7 @@ public class PedidoController {
     }
 
     @PostMapping
-    public Mono<ResponseEntity<Pedido>> save(@RequestBody Pedido pedido, final ServerHttpRequest req) {
+    public Mono<ResponseEntity<Pedido>> save(@Valid @RequestBody Pedido pedido, final ServerHttpRequest req) {
         return service.save(pedido)
                 .map(e -> ResponseEntity
                         .created(URI.create(req.getURI().toString().concat("/").concat(e.getId())))

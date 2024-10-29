@@ -1,5 +1,6 @@
 package com.jfernandez.domain.entities.documents;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -22,9 +23,11 @@ public class Pedido {
     private String id;
 
     @Field
+    @NotBlank(message = "Ingrese una descripcion")
     private String descripcion;
 
     @Field
+    @NotBlank(message = "Ingrese un cliente")
     private String cliente;
 
     @Field
